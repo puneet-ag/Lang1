@@ -50,7 +50,7 @@ model.add(Flatten())
 model.add(Dense(config.hidden_dims, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(1, activation='sigmoid'))
-
+print(model.summary())
 model.compile(loss='binary_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
